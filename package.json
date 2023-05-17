@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rene0115/Nodemailer_API.git"
+    "url": "git+https://github.com/Achykez/myPortfolio_API.git"
   },
-  "author": "Rene0115",
+  "author": "Achykez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rene0115/Nodemailer_API/issues"
+    "url": "https://github.com/myPortfolio_API/Achykez/myPortfolio_API"
   },
-  "homepage": "https://github.com/Rene0115/Nodemailer_API#readme",
+  "homepage": "https://github.com/myPortfolio_API/Achykez/myPortfolio_API",
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
