@@ -22,7 +22,6 @@ const mailer = (sender, text, name, projectDescription, budget) => {
   transporter
     .sendMail(mailOptions)
     .then(() => console.log("mail sent successfully"))
-    console.log(mailOptions)
     .catch((error) => console.log(error));
 };
 
