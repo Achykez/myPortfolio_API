@@ -5,8 +5,10 @@ class MailController {
     const name = req.body.name;
     const message = req.body.message;
     const email = req.body.email;
+    const projectDescription = req.body.projectDescription;
+    const budget = req.body.budget;
     try {
-    mailer(email, message, name);
+    mailer(email, message, name, projectDescription);
     return res.status(200).send({
         success: true,
         message: `mail sent successfully`
