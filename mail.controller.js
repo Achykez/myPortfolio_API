@@ -8,7 +8,7 @@ class MailController {
     const projectDescription = req.body.projectDescription;
     const budget = req.body.budget;
     try {
-    mailer(email, message, name, projectDescription);
+    mailer(email, message, name, projectDescription, budget);
     return res.status(200).send({
         success: true,
         message: `mail sent successfully`
