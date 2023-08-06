@@ -4,6 +4,6 @@ import validator from './validator.js';
 import Schema from './mail.validator.js';
 const mailRouter = express.Router();
 
-mailRouter.post("/",validator(Schema),mailController.sendMail);
+mailRouter.post("/mail",validator(Schema),mailController.sendMail);
 
 export default mailRouter;
