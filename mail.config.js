@@ -21,6 +21,7 @@ const mailer = async (sender, text, name, projectDescription, budget) => {
       to: "chyke.ghoul@gmail.com",
       subject: `Email from ${name}`,
       text: `Project Description: ${projectDescription}\n\nBudget: $${budget}\n\n${text}`,
+      html: `<b>${projectDescription}</b>`
     };
 
     await transporter.sendMail(mailOptions);
