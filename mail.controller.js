@@ -7,20 +7,19 @@ class MailController {
     const email = req.body.email;
     const projectDescription = req.body.projectDescription;
     const budget = req.body.budget;
-    try {
-    mailer(email, message, name, projectDescription, budget);
-    return res.status(200).send({
-        success: true,
-        message: `mail sent successfully`
-    })
-    }
-    catch (err) {
-        return res.status(400).send({
-            success: false,
-            error: err.message
-        })
-    }
     
+    try {
+      await mailer(email, message, name, projectDescription, budget); // Await the mailer function
+      return res.status(200).send({
+        success: true,
+        message: "Mail sent successfully",
+      });
+    } catch (err) {
+      return res.status(400).send({
+        success: false,
+        error: err.message,
+      });
+    }
   }
 }
 
