@@ -6,15 +6,13 @@ dotenv.config();
 const mailer = async (sender, text, name, projectDescription, budget) => {
   try {
     const transporter = nodemailer.createTransport({
-      host: "live.smtp.mailtrap.io",
-      Port: 587,
-
+      service: 'gmail',
+      Port: 465,
+      host: "smtp.gmail.com",
       secure: false,
-      auth: {
-        user: api,
-        pass: b22ddcf218b53949c275e4777f5f1a33,
-        // user: process.env.AUTH_EMAIL,
-        // pass: process.env.AUTH_PASS,
+      auth: {     
+        user: process.env.AUTH_EMAIL,
+        pass: process.env.AUTH_PASS,
       },
     });
 
