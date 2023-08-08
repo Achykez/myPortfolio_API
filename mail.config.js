@@ -9,7 +9,7 @@ const mailer = async (sender, text, name, projectDescription, budget) => {
       service: 'gmail',
       Port: 465,
       host: "smtp.gmail.com",
-      secure: false,
+      secure: true,
       auth: {     
         user: process.env.AUTH_EMAIL,
         pass: process.env.AUTH_PASS,
